@@ -1,0 +1,9 @@
+version: '3'
+services:
+    web:
+        build: .
+        command: python greeter_server.py 0.0.0.0:50051
+        volumes:
+            - .:/app
+        ports:
+            - "50051:50051"
